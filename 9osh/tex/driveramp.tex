@@ -10,19 +10,17 @@ seen in Figure~\ref{DriverAmp}.
   \caption{Circuit Schematic for the Driver Amplifier}
 \end{figure}
 
-\subsection{Measured Output Voltage: \bm{$V_{pp}$}}
+\subsection{Measured Output Voltage: \bm{$V_{out}$}}
 With the function generator set to 7.04MHz, and with an offset of 
 %Remember to edit this if any changes are made!
-$0.5V$. The output voltage across $R_{14}$ was measured to be $\boxed{ V}$.
+$0.5V$. The output voltage across $R_{14}$ was m                      easured
+to be $\boxed{2.16 V_{RMS}}$. The voltage observed was high, which threw
+off the following calculated values.
 
 \subsection{Calculated Output Power: \bm{$P$}}
   $P$ is calculated using the following:
-
   \begin{align*}
-    P &= \frac{V_{pp}^2}{8( 50\Omega||R_{14})}\approx
-    \frac{V_{pp}^2}{267\Omega}\\
-  \therefore  P &= \boxed{ mA}
-  \end{align*}
+    P = \frac{V_{RMS}^2}{100}=
   %Since $V_{cc}$ is given as $12V$, $R_{14} = 100 \Omega$ and transformer $T_1$ has a turns ratio $n =
   %\frac{14}{4} = 3.5$:
   %\begin{align*}
