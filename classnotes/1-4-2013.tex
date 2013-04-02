@@ -1,0 +1,92 @@
+\section{4-1-2013}
+
+%To-Do: get FEKO code from email
+
+\subsection{Loop Antennas}
+
+The first ever designed antenna was the Loop Antenna by Heinrich Hertz in the
+19th century.
+
+Loops are classified in terms of their electrical size:
+\begin{enumerate}
+  \item small circumference $< \frac{\lambda}{10}$
+  \item large circumference
+\end{enumerate}
+
+    45 foot loop for a full-wavelength antenna! Doable, but not readily
+    mountable\ldots
+
+    Typically used as:
+      -Rx antennas for portable radios and pagers
+      -Loops have small signal to noise ratio, but are not very efficient
+      -Used for radio wave navigation, direction finding
+      -Probes for near-field measurements
+      -Probes for waveguide excitation
+      -Short range wireles communications
+      -Short range wireless power
+        --pacemakers, for example
+      -Ground penetration at very low freqs (water on Mars
+      -Parts of other antennas
+        --Yagi-Uda directional arrays
+        --Helical
+
+Radiation Resistance is very small, and this is a major problem. In contrast to
+dipoles:
+\[ l \leq \frac{\lambda}{10}\]
+
+Loop antenna radiation resistance is VERY SMALL (power of 4 as opposed to power
+of 2)
+
+\[
+  P_{rad} = \eta\cdot \big( \frac{\pi}{12} \big) (ka)^4 |I_0|^2 = 1/2
+  |I_0|^2 R_r
+  20\pi^2\cdots
+\]
+
+\[
+  C=0.1\cdot \lambda
+  R_{r_{loop}} \approx 0.02\Omega
+  R_{r_{dipole}} \approx 2\Omega
+  \eta_{loop} = \frac{0.02}{0.12} \approx 16\%
+  \eta_{dipole} = \frac{2}{2.1} \approx 95\%
+\]
+
+For a small loop
+\[
+  R_r = 20\pi^2(\frac{C}{\lambda}
+  D_0=\frac{3}{2}
+  A_{em}={3\lambda^2}{8\pi} %!
+\]
+2x the width of a spherical (isotropic) antenna.
+
+How can radiation resistance be increased?
+  Two practical ways:
+  -Increase number of turns
+  \[
+    R_r \approx 20 \pi^2 \frac{ }
+  \]
+  -Use ferrite rods: Increases magnetic flux through the loops so that the
+  total open circuit voltage of the rx loops ant. is increased!
+  %But this is not practical for our design!
+How to feed loops? %see powerpoint for sketches!
+-two wire loop (TRL)
+-coaxial cable (very nice antenna)
+-Shielded loop
+
+%See loop paper sent by Filipovic
+Tuning the cap changes the reflection coefficient, and therefore ``tunes'' the
+radio!
+The coupling loop is used to match the impedance (works as a transformer) of the loop (very small) to
+the coax cable (50 $\Omega$)
+%sketch the donut-like shape of the radiation pattern!
+
+\subsection{Friis}
+
+How much power rx antenna delivers to rxer?
+%Everything is in dBm!
+%norcal out is 2W, in dBm this is 33dBm -> why?
+
+\subsection{Effects of Surrounding Environment}
+
+
+
