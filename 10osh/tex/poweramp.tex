@@ -1,8 +1,9 @@
 \section{Power Amplifier}
 
 \subsection{Receiver Switch}
-First, the receiver switch was built in order to protect the Rx circuitry when
-the transmitter is active. The schematic of the filter is shown in
+Before building the power amplifier itself,a receiver switch was installed in order
+to protect the receiver circuitry for when the transmitter will be active. 
+The schematic of the protective switch is shown in
 Figure~\ref{fig:RxSwitch}.
 
 \begin{figure}[h!]
@@ -22,15 +23,49 @@ build according to the schematic shown in Figure~\ref{fig:powamp}.
   \caption{Power Amplifier}
 \end{figure}
 
-\subsection{Measurements}
-In order to prevent cooking the oscilloscope, a 30dB attenuator was connected
-between the antenna terminal and
-%Ranging from 5V to 30V
+\subsection{Measurements and Analysis}
+In order to prevent cooking the oscilloscope prematurely, a 40dB attenuator was connected
+between the antenna terminal and the coaxial cable. After this, the function
+generator was connected across $R_{14}$ and set initially to 1$V_{pp}$ at
+7.04$MHz$.
 
-\begin{tabular}{|c|c|c|c|c|}
+The following conditions were noted:
+\begin{align*}
+  \text{Input Voltage} &\equiv        V_0[V_{pp}]\\
+  \text{Output Voltage} &\equiv       V[V_{pp}]\\
+  \text{Supplied Current} &\equiv     i_0[mA]\\
+  \text{Supplied Power} &\equiv       P_0[mW]\\
+  \text{Output Power} &\equiv         P[mW]\\
+  \text{Gain} &\equiv                 G\\
+  \text{Efficiency} &\equiv           \eta\\
+\end{align*}
+The measurable values are $V_0$, $V$, and $i_0$. The remaining values were
+calculated using the following equations:
+\begin{align*}
+  \text{Let } & R_L=50\Omega;\, V_{DC}=12V\\
+  P_0   &=  V_{DC}\cdot i_0\\
+  P     &=  \frac{V^2}{16\cdot R_L}\\
+  \eta  &=  \frac{P}{P_0}\\
+  G     &=  20log \bigg( \frac{V}{V_0} \bigg)
+\end{align*}
+
+Ranging from 5V to 30V in increments of 2.5$V$, the relevant values were
+recorded into the following table.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
   \hline
-  Output Voltage $V_0$ & Output Power $P$  & Supply Power $P_0$  & Efficiency
-  $\eta$\\
+  $V_0$   &   $V$   &   $i_0$   &   $P_0$   &   $P$   &   $G$   &   $\eta$\\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
+  1.712   &   5.12  &   41      &   492     &   32.7  &   9.52  &   6.7\% \\
   \hline
 
 \end{tabular}
