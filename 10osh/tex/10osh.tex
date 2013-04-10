@@ -14,41 +14,39 @@ filter, with an output designed to be around 2 Watts. The Transmit mixer is
 designed to combine the signal from the VFO and the Transmit oscillator.
 
 %\input{./cir/norcal40a.tex}
-\begin{figure}[h!]\label{Norcal40A}
-  \centering
-  \begin{circuitikz}[american voltages] \draw
-  (0,0) node[anchor=east] {Key}
-    to[ sV=Tx Osc., o- ] (2,0)
-    (3,0) node[mixer] (txmix) {}
-      (txmix.in 1) node[left] {}
-      (txmix.in 2) node[below] {}
-      (txmix.out)  node[right] {}
-
-    (6,0) node[buffer] (buf) {}
-    (8,0) node[buffer] (drv) {}
-    (10,0) node[buffer] (pow) {}
-    (13,-0.25) node[european and port] (harmfilt) {h}
-    (13,-0.25) node[antenna] (ant) {}
-   
-    (3,-2) node[] (VFO1) {}
-    (7,-2) node[] (VFO2) {}
-    (VFO1) to[short ,i=2.1] (txmix.in 2) 
-    (VFO1) to[sV=VFO] (VFO2)
-
-
-      %Connections
-     (2,0) to[short, i=4.92] (txmix.in 1)
-     (txmix.out) to[generic] (buf.in)
-     (buf.out) to[short, i=a] (drv.in)
-     (drv.out) to[short, i=b] (pow.in)
-     (pow.out) to[short, i=c] (harmfilt.in 1)
-     (harmfilt.out) to[short] (ant)
-
-
-
-    ;\end{circuitikz}
-%  \caption{Norcal 40A}
-\end{figure}
+%\begin{figure}[h!]\label{Norcal40A}
+%  \centering
+%  \begin{circuitikz}[american voltages] \draw
+%  (0,0) node[anchor=east] {Key}
+%    to[ sV=Tx Osc., o- ] (2,0)
+%    (3,0) node[mixer] (txmix) {}
+%      (txmix.in 1) node[left] {}
+%      (txmix.in 2) node[below] {}
+%      (txmix.out)  node[right] {}
+%
+%    (6,0) node[buffer] (buf) {}
+%    (8,0) node[buffer] (drv) {}
+%    (10,0) node[buffer] (pow) {}
+%    (13,-0.25) node[european and port] (harmfilt) {$_{H}$}
+%    (13,-0.25) node[antenna] (ant) {}
+%   
+%    (3,-2) node[] (VFO1) {}
+%    (7,-2) node[] (VFO2) {}
+%    (VFO1) to[short ,i=2.1] (txmix.in 2) 
+%    (VFO1) to[varvsourcesin=VFO] (VFO2)
+%
+%
+%      %Connections
+%     (2,0) to[short, i=4.92] (txmix.in 1)
+%     (txmix.out) to[generic] (buf.in)
+%     (buf.out) to[short, i=a] (drv.in)
+%     (drv.out) to[short, i=b] (pow.in)
+%     (pow.out) to[short, i=c] (harmfilt.in 1)
+%     (harmfilt.out) to[short] (ant)
+%
+%    ;\end{circuitikz}
+%%  \caption{Norcal 40A}
+%\end{figure}
 
 \input{./tex/poweramp.tex}
 \newpage
