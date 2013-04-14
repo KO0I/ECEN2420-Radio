@@ -1,0 +1,107 @@
+\section{Power Amplifier}
+
+\subsection{Receiver Switch}
+Before building the power amplifier itself, a receiver switch was 
+installed in order
+to protect the receiver circuitry for when the transmitter will be active. 
+The schematic of the protective switch is shown in
+Figure 1.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.6]{./img/RxSwitch.png}
+  \label{fig:RxSwitch}
+  \caption{Receiver Switch}
+\end{figure}
+
+After the installation of the switching circuitry, the power amplifier was then
+build according to the schematic shown in Figure 2.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./img/powamp.png}
+  \label{fig:powamp}
+  \caption{Power Amplifier}
+\end{figure}
+
+\subsection{Measurements and Analysis}
+In order to prevent cooking the oscilloscope prematurely, a 40dB attenuator was connected
+between the antenna terminal and the coaxial cable. After this, the function
+generator was connected across $R_{14}$ and set initially to 1$V_{pp}$ at
+7.04$MHz$.
+
+The following aspects of the circuit were the subject of analysis, and for
+the purpose of calculation had the following variable names: 
+\begin{align*}
+  \text{Input Voltage} &\equiv        V_0[V_{pp}]\\
+  \text{Output Voltage} &\equiv       V[V_{pp}]\\
+  \text{Supplied Current} &\equiv     i_0[mA]\\
+  \text{Supplied Power} &\equiv       P_0[mW]\\
+  \text{Output Power} &\equiv         P[mW]\\
+  \text{Gain} &\equiv                 G\\
+  \text{Efficiency} &\equiv           \eta\\
+\end{align*}
+The measurable values are $V_0$, $V$, and $i_0$. The remaining values were
+calculated using the following equations:
+\begin{align*}
+  \text{Let } & R_L=50\Omega;\, V_{DC}=12V\\
+  P_0   &=  V_{DC}\cdot i_0\\
+  P     &=  \frac{V^2}{16\cdot R_L}\\
+  \eta  &=  \frac{P}{P_0}\\
+  G     &=  20log \bigg( \frac{V}{V_0} \bigg)
+\end{align*}
+
+Next, $V_0$ was adjusted such that the output $V$ was 
+measured to be 5$V_{pp}$.
+By adjusting the supplied voltage $V_0$, the measured output 
+$V$ was increased in intervals of 2.5$V_{pp}$ until $V$ was 
+measured to be $30 V_{pp}$.
+The relevant values found on each iteration were
+recorded into the following table. It should be noted that in 
+order to compensate for the 40dB attenuation, the scope's values 
+were multiplied by 100x (fortunately, the Agilent scope had this 
+functionality built-in).
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+  \hline
+  $V_0$[$V_{pp}$]   &   $V$[$V_{pp}$]   &   $i_0$[mA]   &   $P_0$[mW]   &
+  $P$[mW]   &   $G$[db]   &   $\eta$\\
+  \hline
+  1.712   &   5.12  &   41.0    &   492     &   32.7  &   9.52  &   6.70\% \\
+  1.803   &   7.52  &   49.0    &   588     &   70.6  &  12.4  &   12.0\% \\
+  1.866   &   10.0  &   56.0    &   672     &   125   &  14.6  &   18.6\% \\
+  1.922   &   12.5  &   63.0    &   756     &   195   &  16.4  &   25.8\% \\
+  1.965   &   15.0  &   71.0    &   852     &   281   &  17.7  &   33.3\% \\
+  2.012   &   17.5  &   79.0    &   948     &   383   &  18.8 &    40.4\% \\
+  2.053   &   20.0  &   86.0    &   1.03[W]    &   500   &  19.8  &   48.4\% \\
+  2.094   &   22.5  &   94.0    &   1.13[W]    &   633   &  20.6  &   56.1\% \\
+  2.168   &   25.0  &   102     &   1.22[W]    &   781   &  21.2  &   63.8\% \\
+  2.189   &   27.5  &   111     &   1.33[W]    &   945   &  22.0  &   70.9\% \\
+  2.229   &   30.0  &   119     &   1.43[W]    &   1.13[W]  &  22.6  &   78.8\% \\
+  \hline
+
+\end{tabular}
+\end{center}
+
+\subsection{Plotting $\eta$ v.s. $P$}
+
+Taking the values from the table, plots can be made that
+demonstrate the circuit's properties.
+In Figure 3, the efficiency $\eta$ is plotted against the
+output power $P$. In Figure 4, the gain of the power
+amplifier was plotted against the input RF Voltage.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./img/plot1.png}
+    \label{fig:efficiencyvpower}
+    \caption{Plot of Efficiency $\eta$ v.s. Output Power $P$}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[scale=0.5]{./img/plot2.png}
+    \label{fig:gainvRFvolt}
+    \caption{Plot of Gain v.s. input RF Voltage}
+\end{figure}
