@@ -1,0 +1,75 @@
+\section{April 12th, 2013}
+\section{Mixers (Ch. 12)}
+%See:
+%``http://whites.sdsmt.edu/classes/ee322/class_notes/322Lecture27.pdf``
+\subsection{What are mixers?}
+Mixers are used to shift frequencies, combining two time-varying signals.
+
+%   RF->(x)->IF
+%        |
+%       LO
+
+Given:
+\[
+  f_1,f_2 \text{ mixed gives: } |(f_1-f_2)|,(f_1+f_2)
+\]
+
+\subsection{Mixing involving non-linear devices (e.g. Diodes)}
+
+\subsection{Mixing involving linear devices but with time-varying circuits}
+
+\section{Gilbert Cell}
+All mixers used in the Norcal 40A are based on the Gilbert Cell. Belonging to
+the second class of Mixers (linear devices, varying time).
+z
+\begin{figure}
+  \centering
+%  \includegraphics
+\end{figure}
+
+\subsection{What is seen from GC?}
+\begin{enumerate}
+  \item RF Signal is input to long-tail 
+    differential amplifier pair.
+  \item Collectors of $Q_1$, $Q_2$ have a set of 4
+    close-connected BJTs driven by local oscillators
+    $LO_{1,2}$
+  \item The symmetry is altered in connecting 4
+    cross-connected BJTs to the IF outputs.
+\end{enumerate}
+
+\subsection{How does the Gilbert Cell operate?}
+\begin{enumerate}
+  \item Assume $V_{LO_1}$ is high enough such
+    that $Q_3$ and $Q_5$ turn on, and that
+  $V_{LO_2}$ is small enough such that 
+  $Q_4$ and $Q_6$ are off.
+  \begin{enumerate}[(a)]
+    \item $Q_3$,$Q_5$ works as closed switches
+      \begin{enumerate}[i]
+      \item \(Q_1\) is connected to $R_1$
+      \item \(Q_2\) is connected to $R_2$
+    \end{enumerate}
+  \end{enumerate}
+  \item Assume $V_{LO_1}$ is high enough such
+    that $Q_4$ and $Q_6$ turn on, and that
+  $V_{LO_1}$ is small enough such that 
+  $Q_3$ and $Q_5$ are off.
+  \begin{enumerate}[(a)]
+    \item $Q_4$,$Q_6$ works as closed switches
+      \begin{enumerate}[i]
+      \item $Q_1$ is connected to $R_2$
+      \item $Q_2$ is connected to $R_1$
+    \end{enumerate}
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Overall function}
+\boxed{
+The overall function of the Gilbert cell is to 
+multiply in the time domain
+the input RF signal (at the RF frequency) by a 
+square wave with value +1 or –1 at the LO 
+frequency! This is mixing. 
+}
+

@@ -3,7 +3,8 @@
 
 \title{On-Site Homework 11}
 \course{ECEN 2420}
-\author{$\boxed{\text{Patrick Harrington}}$}
+\author{$\boxed{\text{Patrick Harrington}}, \boxed{\text{Jelena Notaros}}, \boxed{\text{Evan Schomer}}$}
+\group{Group 4}
 
 \begin{document}
 \maketitle
@@ -25,7 +26,7 @@ alignment.
   \begin{enumerate}
     \item All (4) jacks, (2) switches, (3) trimpots, (6) trimcaps, (3) pots had
       their locations noted.
-    \item Key jack $J_3$ and the antenna jack $J_1$i were kept disconnected.
+    \item Key jack $J_3$ and the antenna jack $J_1$ were kept disconnected.
     \item A 3.5mm stereo jack was plugged into $J_4$, which is the audio output
       jack.
     \item The trimmer potentiometers were adjusted according to the following specs:
@@ -50,14 +51,28 @@ to ensure everything went along properly.
 \begin{enumerate}
   \item DC Power Supply set to 12.0V, current limited to 100mA.
   \item The power cable was attached to the Norcal 40A and $S_1$ was turned on
-    (up position). The DC current was measured to be $\boxed{mA}$ which fell in the
+    (up position). The DC current was measured to be $\boxed{16 mA}$ which fell in the
     expected range between 15mA and 18mA.
   \item Using a proper CW keyer, the DC current draw was then measured. The
     range of values was between 25mA and 55mA, the measured DC current draw
-    with the key active was $\boxed{mA}$.
+    with the key active was $\boxed{26 mA}$.
   \item Ater these measurements were taken, the keyer was detached from the key
     jack $J_3$.
 \end{enumerate}
+
+\subsection{Problems Encountered}
+Sadly, during this step, a serious issue with the 
+radio was found. Namely, when powered on, there was 
+a continuous 700Hz tone from the audio output, 
+except for when the keyer was pressed. Observing the DC supply showed that the
+current draw was 25$mA$ under all conditions (even when the keyer was pressed).
+Initially, the ICs $U_1$ and $U_2$ were replaced since it was found that the 8V line was oscillating at $\approx$ 
+2MHz; it was assumed that these ICs may have been defective.
+This however proved futile! Next, the capacitor $C_{48}$ was replaced as it was
+possible that it had been leaking. Interestingly, the tone persisted even after
+the capacitor was removed. The conclusion was that the transistor $Q_4$ was
+damaged and leaking. After replacing this part, the tuning procedure finally resumed
+without issue or further exasparation.
 
 \section{Calibration}
 With the pre-calibration steps carefully completed, we proceeded to follow the
@@ -78,30 +93,30 @@ following through exactly as directed:
 \subsection{Calibrating the VFO}
 \begin{enumerate}
   \item With the scope probe set to 10:1, the signal was measured to be within
-    600 and 800 $mV_{pp}$ at $\boxed{mV_{pp}}$
+    600 and 800 $mV_{pp}$.
   \item With $R_{17}$ set at half position, $C_{50}$ was adjusted until the VFO frequency was at 2.
     125MHz.
-  \item $R_{17}$ was then set counterclockwise and the frequency was measured
-    to be $\boxed{ MHz\pm 100Hz}$
-  \item $R_{17}$ was then set fully clockwise and the frequency was measured
-    to be $\boxed{ MHz\pm 100Hz}$
+  \item $R_{17}$ was then set counterclockwise and the frequency was precisely measured
+    to be $\boxed{2.14457 MHz\pm 100Hz}$
+  \item $R_{17}$ was then set fully clockwise and the frequency was precisely measured
+    to be $\boxed{2.10505 MHz\pm 100Hz}$
   \item $R_17$ was then adjusted until the frequency was as close to possible
     to 2.125MHz.
-  \item The freq range of the radio was found to be approximately $\boxed{
-    Hz\pm 200Hz}$
+  \item The freq range of the radio was found to be $\boxed{
+    39.5200 kHz}$
 \end{enumerate}
 \subsection{Receiver Alignment}
 \begin{enumerate}
   \item The scope was again checked so that it measured 200mV per division,
     and the time base was set to 2ms per division.
-  \item $C_{17}$ was adjusted so that the measured frequency was 575$\pm 10Hz$
-  \item The measured audio voltage was found to be $\boxed{ mV_{pp}}$
-  \item The RF signal generator was adjusted such that a 6dB ($\approx$4x) change was observed.
-  \item The 6dB bandwidth was measured to be $\boxed{ Hz}$
+  \item $C_{17}$ was adjusted so that the measured frequency was 575$\pm 10Hz$.
+  \item The measured audio voltage was found to be $\boxed{3.32 mV_{pp}}$.
+  \item The RF signal generator was adjusted such that a 6dB or a $\frac{1}{2}$ change was observed.
+  \item The 6dB bandwidth was measured to be $\boxed{454 Hz}$.
   \item The RF signal was then adjusted until it was near 575$Hz$.
   \item Next, the RIT was set on by turning on $S_2$, and $R_16$ was adjusted
     and the frequencies were noted. The range of frequencies was found to be
-    $\boxed{ Hz}$
+    between $\boxed{227 Hz \to 1.02kHz}$, or simply a range of $\boxed{793 Hz}$.
   \item The RIT switch $S_2$ was turned off and the audio frequency was
     returned to $\approx$ 575$Hz$.
   \item The AGC potentiometer $R_6$ was adjusted such that the voltage at the
@@ -118,24 +133,33 @@ following through exactly as directed:
   \item The CW keyer was connected $J_3$
   \item $C_{39}$ (TX filter) was set to yield max voltage at an audio frequency
     on the scope, where the trimcap $C_{39}$ was not near either extreme value.
-  \item The DC current draw was measured to be $\boxed{ mA}$
+  \item The DC current draw was measured to be $\boxed{100 mA}$
   \item $C_{34}$ (TX frequency) was adjusted to be $\approx575Hz\pm10Hz$
   \item The scope was then set to read 2V per division and the time base was
     set to 200ns per division. The scope was attached to the TX end of the 30dB
     attenuator (which was not the open end).
   \item The 40dB attenuator was found to reduce the power by a factor of
-    $\boxed{ }$
+    $10\,log_{10}(P_{in})= \boxed{10,000}$
   \item The RF voltage was measured in order to calculate the transmitter
-    power, which was found to be $\boxed{ W}$
-  \item The short on $J_3$ was removed.
+    power, which was found to be $20V$ (accounting for the attenuator), and therefore the transmitter power was
+    found as:
+    \begin{align*}
+      P_{TX}&=\frac{V^2_{pp}}{16\cdot R}\\
+      &=\frac{20^2}{16\cdot 50}\\
+      &=\boxed{500 mW}
+    \end{align*}
   \item The DC power supply was limited to 600mA
   \item The scope was set to read 5V per division
   \item $R_{13}$ was set to full clockwise position, and the RF voltage was
   measured, taking care to keep the transmitter from running for more than a
-  few seconds at max power. The full-power voltage was found to be $\boxed{ V}$.
-\item $R_{13}$ was then set to 50\% value, the RF voltage was found to be
-  $\boxed{ V}$.
+  few seconds at max power. The full-power voltage was found to be $\boxed{31 V}$.
   \item The maximum power the transmitter can provide was found to be $\boxed{
-    W}$
+    1.2 W}$. Unfortunately, this is 60\% of the ideal transmitting power of
+    $2W$.
+  \item Finally, $R_{13}$ was set to the lowest value such that transmission
+    would persist. Sadly, this was about $\frac{3}{4}$ the way turned, which
+    means that the radio has little headroom for transmission. It seems
+    worthwhile to try and track down the cause of non-ideal performance in the
+    future.
 \end{enumerate}
 \end{document}
