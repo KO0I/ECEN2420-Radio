@@ -1,0 +1,78 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2325,         68]
+NotebookOptionsPosition[      1999,         53]
+NotebookOutlinePosition[      2343,         68]
+CellTagsIndexPosition[      2300,         65]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tRange", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "6.3", ",", "6.33888", ",", "6.37777", ",", "6.416666", ",", "6.455555", 
+     ",", "6.49444444", ",", "6.53333333", ",", "6.57222222", ",", 
+     "6.6111111", ",", "6.65", ",", "6.65", ",", ",", "6.681", ",", "6.712", 
+     ",", "6.743", ",", "6.774", ",", "6.805", ",", "6.8366", ",", "6.86777", 
+     ",", "6.89888889", ",", "6.93", ",", "6.93", ",", "6.945", ",", "6.961", 
+     ",", "6.976", ",", "6.992", ",", "7.0077", ",", "7.0233", ",", "7.0388", 
+     ",", "7.07", ",", "7.07", ",", "7.023", ",", "7.03889", ",", "7.0544", 
+     ",", "7.07", ",", "7.07", ",", "7.14", ",", "7.21", ",", "7.28", ",", 
+     "7.35", ",", "7.42", ",", "7.49", ",", "7.56", ",", "7.63", ",", "7.7"}],
+     "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"impR", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"impX", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListLinePlot", "[", "impR"}]}], "Input",
+ CellChangeTimes->{{3.5763287025139055`*^9, 3.576328813429906*^9}, {
+  3.5763288556123056`*^9, 3.57632897224155*^9}, {3.576329204108343*^9, 
+  3.576329497471677*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.576328827937906*^9, 3.5763288356755056`*^9}, 
+   3.5763289281838903`*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5763289221775827`*^9, 3.576328922208784*^9}}]
+},
+WindowSize->{952, 1133},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 1216, 24, 152, "Input"],
+Cell[1776, 46, 122, 2, 31, "Input"],
+Cell[1901, 50, 94, 1, 31, InheritFromParent]
+}
+]
+*)
+
+(* End of internal cache information *)
+
