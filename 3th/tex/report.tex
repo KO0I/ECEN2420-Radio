@@ -100,7 +100,7 @@
 
 % *** MATH PACKAGES ***
 %
-%\usepackage[cmex10]{amsmath}
+\usepackage[cmex10]{amsmath}
 % A popular package from the American Mathematical Society that provides
 % many useful and powerful commands for dealing with mathematics. If using
 % it, be sure to load this package with the cmex10 option to ensure that
@@ -123,7 +123,7 @@
 
 % *** SPECIALIZED LIST PACKAGES ***
 %
-%\usepackage{algorithmic}
+\usepackage{algorithmic}
 % algorithmic.sty was written by Peter Williams and Rogerio Brito.
 % This package provides an algorithmic environment fo describing algorithms.
 % You can use the algorithmic environment in-text or within a figure
@@ -145,7 +145,7 @@
 
 % *** ALIGNMENT PACKAGES ***
 %
-%\usepackage{array}
+\usepackage{array}
 % Frank Mittelbach's and David Carlisle's array.sty patches and improves
 % the standard LaTeX2e array and tabular environments to provide better
 % appearance and additional user controls. As the default LaTeX2e table
@@ -324,7 +324,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Take-Home Homework 3}
+\title{Analysis of a Vertical Half-Wavelength Dipole Antenna in the 40 Meter Band}
 %
 %
 % author names and IEEE memberships
@@ -359,7 +359,7 @@
 
 
 % The paper headers
-\markboth{ECEN-2420 Spring 2013: Wireless Electronics for Communications}{ }
+\markboth{ }{ECEN-2420 Spring 2013: Wireless Electronics for Communications}
 
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
@@ -390,10 +390,11 @@
 \maketitle
 
 
-\begin{abstract}
+%\begin{abstract}
 %\boldmath
 
-\end{abstract}
+%\end{abstract}
+
 % IEEEtran.cls defaults to using nonbold math in the Abstract.
 % This preserves the distinction between vectors and scalars. However,
 % if the journal you are submitting to favors bold math in the abstract,
@@ -418,9 +419,11 @@
 % 
 % Here we have the typical use of a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
-for IEEE journal papers produced under \LaTeX\ using
-IEEEtran.cls version 1.7 and later. I wish you the best of success.
+\IEEEPARstart{D}{ipoles} are a common antenna design renowned for their
+simplicity, robustness and high efficiency. While although dipoles are used
+across a wide number of frequencies, they enjoy significant popularity for HF
+(frequencies from 3 to 30 MHz),where both omnidirectional transmission
+and reception are required.
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
 
