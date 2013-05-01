@@ -1,12 +1,21 @@
 \section{Loss in a Real Coaxial Cable}
 
 Using an RG-8/U coaxial cable, the required specifications were 
-identified from a datasheet \cite{coax}.
-Next, using the following formula \cite{coaxformula} can be used to approximate the characteristic
-impedance:
+identified from a datasheet \cite{coax}. Using Equation~(\ref{eq:cof}) \cite{cof}
+the properties of the coaxial cable can be analyzed.
 
 \begin{align}
 Z_0&=\frac{1}{2\pi}\sqrt{\frac{\mu}{\epsilon}}ln\frac{D}{d}
+\approx\frac{139\Omega}{\sqrt{\epsilon_r}}log\bigg(\frac{D}{d}\bigg)\label{eq:cof}
 \end{align}
 
-where
+Where $\epsilon_r$ can be solved as being 1.25. Next, using
+Equation~(\ref{eq:loss}), the loss in terms of dB/m can be found.
+
+\begin{align}
+  \alpha_L&\approx92.0216\sqrt{\epsilon_r}tan(\delta)\cdot f\label{eq:loss}
+\end{align}
+
+Where $f=7$MHz and $tan(\delta)\approx5\cdot10^{-10}$, so the loss in dB/meter at 7
+  MHz is about 0.38db/m, so with 20 meters, the total loss is approximately
+  .56dB.
