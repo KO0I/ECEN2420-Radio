@@ -1,1 +1,29 @@
 \section{Effects of Real Antenna Materials}
+
+Taking into account real matallic materials for antenna construction, two
+factors need to be considered; the material itself and the diameter of the
+wire.
+\subsection{Material and Diameter}
+A better conductor is preferable for the reduction of losses. As a result, it
+seems most prudent to use Copper, which is an excellent conductor with a
+conductivity $\sigma=59.6*10^6$S/m \cite{copper}.
+For diamater, it appears that 14 AWG is a desirable wire thickness for its durability (with a
+breaking strength rated at 550lbs from some manufacturers)\cite{wireman}
+\subsection{Effects}
+
+Compared to the ideal antenna in free space, the more realistic antenna had the
+following differences at 7Mhz.Afterwards, the length of the dipole was adjusted
+such that $X_A$ would be near zero again, and measurements were listed as the \emph{
+Adjusted} entry in the following table. The new length was 48.4\% of $\lambda$.
+\begin{center}
+\begin{tabular}{|l||c|c|c|}
+  \hline
+  \emph{Property}&\emph{Ideal}&\emph{Practical}&\emph{Adjusted}\\
+  \hline
+  VSWR        & 1.43              &   1.94          & 1.93\\
+  $R_A$       & 75.7$\Omega$      &   97.1$\Omega$  & 96.8$\Omega$\\
+  $X_A$       & 0$\Omega$         &   1.93$\Omega$  & -43.5m$\Omega$\\
+  Efficiency  & 92.93\%           &  29.36\%        & 29.53\%\\
+  \hline
+\end{tabular}
+\end{center}
